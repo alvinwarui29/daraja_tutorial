@@ -10,5 +10,5 @@ curl_setopt($curl,CURLOPT_HEADER,false);
 curl_setopt($curl,CURLOPT_USERPWD,$consumerKey.":".$consumerSecret);
 $result = curl_exec($curl);
 $result = json_decode($result);
-echo $access_token = $result->access_token;
+$access_token = $result->access_token;
 curl_close($curl);
